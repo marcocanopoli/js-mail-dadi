@@ -7,6 +7,7 @@
 //var
 //invited emails array
 var invited = ["abc@gmail.com", "abc@gmail.outlook.com", "abc@yahoo.com", "abc@hotmail.com", "abc@icloud.com", "123@gmail.com", "123@gmail.outlook.com", "123@yahoo.com", "123@hotmail.com", "123@icloud.com"]
+
 //boolean for access
 var grantedAccess = false;
 
@@ -17,6 +18,7 @@ var userMail = prompt("Inserisci la tua mail per verificare l'accesso");
 for (var i = 0; i < invited.length; i++) {
     if (userMail == invited [i]) {
         grantedAccess = true;
+        break;
     }
 }
 
@@ -24,5 +26,5 @@ for (var i = 0; i < invited.length; i++) {
 if (grantedAccess) {
     alert("Email verificata, accesso CONSENTITO!");
 } else {
-    alert("Email verificata, accesso NEGATO!");
+    alert("Email non trovata, accesso NEGATO!");
 }
