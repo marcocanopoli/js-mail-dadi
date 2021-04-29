@@ -5,8 +5,8 @@
 */
 
 //get random numbers for both user and pc
-var myNum = getRandomIntInclusive(1, 6);
-var pcNum = getRandomIntInclusive(1, 6);
+var myNum = getRandomInt(6);
+var pcNum = getRandomInt(6);
 
 //chosen numbers messages
 alert("Il tuo numero e' " + myNum);
@@ -25,9 +25,7 @@ if (myNum > pcNum) {
     alert(myNumMsg + "e' uguale al " + pcNumMsg + "parita'!");
 }
 
-//random int between min and max included
-function getRandomIntInclusive(min, max) {
-    min = Math.ceil(min);
-    max = Math.floor(max);
-    return Math.floor(Math.random() * (max - min + 1)) + min;
+//random int, max included
+function getRandomInt(max) {
+    return Math.floor(Math.random() * max) + 1;
   }
